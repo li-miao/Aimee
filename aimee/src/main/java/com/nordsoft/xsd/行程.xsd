@@ -1,0 +1,65 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ibeservice.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IBE_DETETKTResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ErrorRes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="Err_code"/>
+              <xs:element type="xs:string" name="Err_content"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TKTGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IBE_DETR_TKT" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="orgCity"/>
+                    <xs:element type="xs:string" name="dstCity"/>
+                    <xs:element type="xs:string" name="psgrName"/>
+                    <xs:element type="xs:byte" name="fare"/>
+                    <xs:element type="xs:byte" name="tax"/>
+                    <xs:element type="xs:byte" name="totalAmount"/>
+                    <xs:element type="xs:string" name="ticketNo"/>
+                    <xs:element type="xs:string" name="receiptPrinted"/>
+                    <xs:element type="xs:dateTime" name="infantBirthDay"/>
+                    <xs:element type="xs:string" name="psgrType"/>
+                    <xs:element type="xs:byte" name="unaccompaniedChildAge"/>
+                    <xs:element type="xs:byte" name="eTicketType"/>
+                    <xs:element name="segmentGroup">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="IBE_DETR_TKT_Segment" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="airline"/>
+                                <xs:element type="xs:string" name="arrAirportCode"/>
+                                <xs:element type="xs:byte" name="baggageWeight"/>
+                                <xs:element type="xs:string" name="depAirportCode"/>
+                                <xs:element type="xs:dateTime" name="depTime"/>
+                                <xs:element type="xs:string" name="flightNo"/>
+                                <xs:element type="xs:string" name="ticketStatus"/>
+                                <xs:element type="xs:string" name="type"/>
+                                <xs:element type="xs:byte" name="baggagePiece"/>
+                                <xs:element type="xs:dateTime" name="endValidityDate"/>
+                                <xs:element type="xs:dateTime" name="startValidityDate"/>
+                                <xs:element type="xs:string" name="isFPC"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="Source"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

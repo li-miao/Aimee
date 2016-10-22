@@ -1,0 +1,28 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RefountInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="P" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:long" name="OrderId" use="optional"/>
+                      <xs:attribute type="xs:string" name="OrderState" use="optional"/>
+                      <xs:attribute type="xs:string" name="RefoundAmount" use="optional"/>
+                      <xs:attribute type="xs:string" name="TGQHandlingCharge" use="optional"/>
+                      <xs:attribute type="xs:string" name="RefuseResion" use="optional"/>
+                      <xs:attribute type="xs:string" name="TicketNo" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

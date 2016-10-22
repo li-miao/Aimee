@@ -1,0 +1,10 @@
+<Order>
+	<ExpiredInfo>
+		<P OrderId="160216113023001848" OrderState="退票订单审核不通过，交易结束"
+			RefoundAmount="" TGQHandlingCharge="" RefuseResion="" TicketNo="123-5678901212"></P>
+		<P OrderId="160216134543001811" OrderState="退票订单审核不通过，交易结束"
+			RefoundAmount="" TGQHandlingCharge="" RefuseResion="" TicketNo="123-5678901212"></P>
+		<P OrderId="160216140647001833" OrderState="废票订单，等待审核"
+			RefoundAmount="" TGQHandlingCharge="" RefuseResion="" TicketNo="123-5678901212"></P>
+	</ExpiredInfo>
+</Order>

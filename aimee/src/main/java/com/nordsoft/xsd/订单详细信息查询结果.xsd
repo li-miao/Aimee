@@ -1,0 +1,107 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="OrderInfo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:long" name="OrderId"/>
+                <xs:attribute type="xs:string" name="Pnr"/>
+                <xs:attribute type="xs:string" name="RR"/>
+                <xs:attribute type="xs:string" name="BigPNR"/>
+                <xs:attribute type="xs:string" name="OrderTime"/>
+                <xs:attribute type="xs:string" name="OrderStaff"/>
+                <xs:attribute type="xs:string" name="OrderStatus"/>
+                <xs:attribute type="xs:float" name="TotalValue"/>
+                <xs:attribute type="xs:string" name="PayTime"/>
+                <xs:attribute type="xs:string" name="PayStaff"/>
+                <xs:attribute type="xs:string" name="OutTicketType"/>
+                <xs:attribute type="xs:string" name="OutTicketTime"/>
+                <xs:attribute type="xs:string" name="OutTicketStaff"/>
+                <xs:attribute type="xs:string" name="CancelRemark"/>
+                <xs:attribute type="xs:string" name="PayType"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VoyagesInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Voyage" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SeatClassInfo">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="SeatClass" use="optional"/>
+                            <xs:attribute type="xs:byte" name="Discount" use="optional"/>
+                            <xs:attribute type="xs:float" name="FaceValue" use="optional"/>
+                            <xs:attribute type="xs:float" name="AirportBuildFee" use="optional"/>
+                            <xs:attribute type="xs:float" name="FuelFee" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Carrier" use="optional"/>
+                  <xs:attribute type="xs:string" name="FlightNum" use="optional"/>
+                  <xs:attribute type="xs:string" name="FromCity" use="optional"/>
+                  <xs:attribute type="xs:string" name="ToCity" use="optional"/>
+                  <xs:attribute type="xs:string" name="TakeoffTime" use="optional"/>
+                  <xs:attribute type="xs:string" name="ArriveTime" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PassengersInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Passenger" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="Name" use="optional"/>
+                      <xs:attribute type="xs:string" name="PassengerType" use="optional"/>
+                      <xs:attribute type="xs:string" name="CredentialsType" use="optional"/>
+                      <xs:attribute type="xs:string" name="CredentialsCode" use="optional"/>
+                      <xs:attribute type="xs:string" name="TicketNo" use="optional"/>
+                      <xs:attribute type="xs:string" name="TicketType" use="optional"/>
+                      <xs:attribute type="xs:float" name="FaceValue" use="optional"/>
+                      <xs:attribute type="xs:float" name="AirportBuildFee" use="optional"/>
+                      <xs:attribute type="xs:float" name="FuelFee" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PolicyInfo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="IsTJ"/>
+                <xs:attribute type="xs:string" name="BenefitType"/>
+                <xs:attribute type="xs:string" name="Benefit"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ContractInfo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="Name"/>
+                <xs:attribute type="xs:string" name="Phone"/>
+                <xs:attribute type="xs:int" name="Mobile"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

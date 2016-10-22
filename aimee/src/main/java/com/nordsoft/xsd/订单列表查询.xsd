@@ -1,0 +1,15 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="params">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="status"/>
+        <xs:element type="xs:string" name="starttime"/>
+        <xs:element type="xs:string" name="endtime"/>
+        <xs:element type="xs:string" name="pnr"/>
+        <xs:element type="xs:string" name="orderid"/>
+        <xs:element type="xs:string" name="passenger"/>
+        <xs:element type="xs:string" name="maxcount"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

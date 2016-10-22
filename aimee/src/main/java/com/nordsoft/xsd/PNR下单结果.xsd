@@ -1,0 +1,71 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="OrderInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FlightsInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightInfo" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="Carrier" use="optional"/>
+                      <xs:attribute type="xs:short" name="FlightNo" use="optional"/>
+                      <xs:attribute type="xs:string" name="Form" use="optional"/>
+                      <xs:attribute type="xs:string" name="To" use="optional"/>
+                      <xs:attribute type="xs:string" name="TakeoffTime" use="optional"/>
+                      <xs:attribute type="xs:string" name="ArriveTime" use="optional"/>
+                      <xs:attribute type="xs:string" name="SeatClass" use="optional"/>
+                      <xs:attribute type="xs:float" name="BenefitRate" use="optional"/>
+                      <xs:attribute type="xs:float" name="FaceValue" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Passengers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Passenger" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="name" use="optional"/>
+                      <xs:attribute type="xs:string" name="PassengerType" use="optional"/>
+                      <xs:attribute type="xs:string" name="id" use="optional"/>
+                      <xs:attribute type="xs:float" name="AirportBuildFee" use="optional"/>
+                      <xs:attribute type="xs:byte" name="FuleTax" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LinkInfo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="Linker"/>
+                <xs:attribute type="xs:long" name="LinkTel"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="PayUrl"/>
+        <xs:element type="xs:string" name="PayUrl1"/>
+      </xs:sequence>
+      <xs:attribute type="xs:long" name="OrderId"/>
+      <xs:attribute type="xs:string" name="PNR"/>
+      <xs:attribute type="xs:string" name="BigPnr"/>
+      <xs:attribute type="xs:string" name="CreateTime"/>
+      <xs:attribute type="xs:string" name="Operator"/>
+      <xs:attribute type="xs:byte" name="Status"/>
+      <xs:attribute type="xs:float" name="TotlePirce"/>
+      <xs:attribute type="xs:string" name="CancelDataTime"/>
+      <xs:attribute type="xs:string" name="OfficeCode"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
