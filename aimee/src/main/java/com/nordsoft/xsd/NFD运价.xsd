@@ -1,0 +1,46 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ibeservice.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IBE_NFDResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ErrorRes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Err_code"/>
+              <xs:element type="xs:string" name="Err_content"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wsfarelists">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="wsfares" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="AirlineCode"/>
+                    <xs:element type="xs:string" name="FlightCourse"/>
+                    <xs:element type="xs:string" name="SeatClass"/>
+                    <xs:element type="xs:string" name="BasicCabinType"/>
+                    <xs:element type="xs:string" name="Price"/>
+                    <xs:element type="xs:string" name="RtPrice"/>
+                    <xs:element type="xs:string" name="GoDepartureAirport"/>
+                    <xs:element type="xs:string" name="GoArrivalAirport"/>
+                    <xs:element type="xs:string" name="GoStartDate"/>
+                    <xs:element type="xs:string" name="GoExpirationDate"/>
+                    <xs:element type="xs:string" name="SmallestAdvancingDay"/>
+                    <xs:element type="xs:string" name="BiggestAdvancingDay"/>
+                    <xs:element type="xs:string" name="GoFlightNoInclude"/>
+                    <xs:element type="xs:string" name="GoFlightNoExclude"/>
+                    <xs:element type="xs:string" name="RefundRule"/>
+                    <xs:element type="xs:string" name="ChangeRule"/>
+                    <xs:element type="xs:string" name="GoFlightCycle"/>
+                    <xs:element type="xs:string" name="flighttime"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

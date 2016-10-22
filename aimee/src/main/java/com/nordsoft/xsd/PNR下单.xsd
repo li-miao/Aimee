@@ -1,0 +1,15 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="params">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="pnrcontent"/>
+        <xs:element type="xs:string" name="bigpnr"/>
+        <xs:element type="xs:string" name="benefitid"/>
+        <xs:element type="xs:string" name="linker"/>
+        <xs:element type="xs:string" name="linktel"/>
+        <xs:element type="xs:string" name="splitbenefitid"/>
+        <xs:element type="xs:string" name="patcontent"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

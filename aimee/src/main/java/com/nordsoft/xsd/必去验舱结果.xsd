@@ -1,0 +1,54 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="OTAAirRoot">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OTAAirHeader">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="timeStamp"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="OTAAirBody">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="bodyResponse">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="msgCode"/>
+                          <xs:element type="xs:string" name="msgInfo"/>
+                          <xs:element type="xs:string" name="cacheKey"/>
+                          <xs:element type="xs:string" name="cabinMinCount"/>
+                          <xs:element name="cabinInfos" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="airLine"/>
+                                <xs:element type="xs:string" name="cabin"/>
+                                <xs:element type="xs:string" name="number"/>
+                                <xs:element name="odInfos">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="originLocationCode"/>
+                                      <xs:element type="xs:string" name="destinationLocationCode"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

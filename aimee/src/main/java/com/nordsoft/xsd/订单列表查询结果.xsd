@@ -1,0 +1,26 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Orders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="OrderInfo" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:long" name="OrderId" use="optional"/>
+                <xs:attribute type="xs:string" name="PNR" use="optional"/>
+                <xs:attribute type="xs:string" name="RR" use="optional"/>
+                <xs:attribute type="xs:string" name="BigPnr" use="optional"/>
+                <xs:attribute type="xs:string" name="Passenger" use="optional"/>
+                <xs:attribute type="xs:string" name="FlightNum" use="optional"/>
+                <xs:attribute type="xs:string" name="CreateTime" use="optional"/>
+                <xs:attribute type="xs:string" name="Operator" use="optional"/>
+                <xs:attribute type="xs:string" name="Status" use="optional"/>
+                <xs:attribute type="xs:float" name="TotalPrice" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

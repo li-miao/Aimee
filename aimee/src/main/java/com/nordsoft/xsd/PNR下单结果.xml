@@ -1,0 +1,21 @@
+<OrderInfo OrderId="160202153748173916" PNR="HFSG2B" BigPnr="NDVS62"
+	CreateTime="2016/2/2 15:37:48" Operator="hochenlin" Status="1"
+	TotlePirce="4519.42" CancelDataTime="2016-02-02 00:01:00" OfficeCode="CAN259">
+	<FlightsInfo>
+		<FlightInfo Carrier="CA" FlightNo="9602" Form="SYX" To="PEK"
+			TakeoffTime="2016/2/24 6:45:00" ArriveTime="2016/2/24 10:35:00"
+			SeatClass="M" BenefitRate="0.91" FaceValue="2230.00" />
+		<FlightInfo Carrier="CA" FlightNo="9602" Form="SYX" To="PEK"
+			TakeoffTime="2016/2/24 6:45:00" ArriveTime="2016/2/24 10:35:00"
+			SeatClass="M" BenefitRate="0.91" FaceValue="2230.00" />
+	</FlightsInfo>
+	<Passengers>
+		<Passenger name="段辉环" PassengerType="Adult" id="42282319870711367X"
+			AirportBuildFee="50.0" FuleTax="0" />
+		<Passenger name="李佳" PassengerType="Adult" id="110108198507176362"
+			AirportBuildFee="50.0" FuleTax="0" />
+	</Passengers>
+	<LinkInfo Linker="樊飞" LinkTel="13811907002" />
+	<PayUrl><![CDATA[https://mapi.alipay.com/gateway.do?_input_charset=gb2312&amp;body=%b6%a9%b5%a5%ba%c5%3a%3b%ba%bd%b3%cc%3a160202153748173916&amp;credit_card_default_display=Y&amp;credit_card_pay=Y&amp;notify_url=http%3a%2f%2fpay.517na.com%2fPay%2fAliPayNotify.aspx&amp;out_trade_no=160202153748173916&amp;partner=2088701505091002&amp;payment_type=1&amp;paymethod=directPay&amp;royalty_parameters=pingtai111%40gmail.com%5e4.52%5e%bd%bb%d2%d7%b7%d1&amp;royalty_type=10&amp;seller_email=cd5178na%40hotmail.com&amp;service=create_direct_pay_by_user&amp;subject=%b5%e7%d7%d3%bf%cd%c6%b1&amp;total_fee=4519.42&amp;sign=f5302fe99f016f20422b6253babfe306&amp;sign_type=MD5]]></PayUrl>
+	<PayUrl1><![CDATA[https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi?attach=%d6%a7%b8%b6%c8%cb%3ahochenlin%3b%b6%a9%b5%a5%ba%c5%3a160202153748173916%3bPNR%3aHFSG2B%3b%ba%bd%b3%cc%3a%c8%fd%d1%c7-%b1%b1%be%a9&amp;bank_type=0&amp;bargainor_id=1212921601&amp;cmdno=1&amp;cs=gb2312&amp;date=20160202&amp;desc=%bb%fa%c6%b1%a3%baHFSG2B&amp;fee_type=1&amp;return_url=http%3a%2f%2fpay.517na.com%2fPay%2fTencentPayNotify.aspx&amp;sign=34A4F6C42F7E78F1697F431D652F0E9D&amp;sp_billno=160202153748173916&amp;total_fee=451942&amp;transaction_id=1212921601201602020015682523]]></PayUrl1>
+</OrderInfo>

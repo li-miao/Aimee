@@ -1,0 +1,31 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="a">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte" name="NotifyType"/>
+        <xs:element name="Message">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="OrderId"/>
+              <xs:element type="xs:byte" name="OrderState"/>
+              <xs:element name="Passengers" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:long" name="TicketNo"/>
+                    <xs:element type="xs:string" name="PassengerName"/>
+                    <xs:element type="xs:long" name="CardID"/>
+                    <xs:element type="xs:byte" name="Fee"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:byte" name="ReturnTotalMoney"/>
+              <xs:element type="xs:byte" name="OrderSource"/>
+              <xs:element type="xs:string" name="RefuseMsg"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="Sign"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
