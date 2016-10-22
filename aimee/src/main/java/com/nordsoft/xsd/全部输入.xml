@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<request>
+	<service></service>
+	<pid></pid>
+	<username></username>
+	<sign></sign>
+	<params>
+		<pnrcontent></pnrcontent>
+		<patcontent></patcontent>
+	</params>
+</request>

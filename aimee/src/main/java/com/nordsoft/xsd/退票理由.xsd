@@ -1,0 +1,58 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="xml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="reasons">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reason" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="id"/>
+                    <xs:element type="xs:byte" name="type"/>
+                    <xs:element type="xs:string" name="content"/>
+                    <xs:element type="xs:string" name="inspections"/>
+                    <xs:element name="extends" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="extend">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="id"/>
+                                <xs:element type="xs:byte" name="type"/>
+                                <xs:element type="xs:string" name="remark"/>
+                                <xs:element type="xs:string" name="check"/>
+                                <xs:element type="xs:byte" name="length"/>
+                                <xs:element type="xs:string" name="inspections"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inspections">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="inspection" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:short" name="id"/>
+                    <xs:element type="xs:byte" name="type"/>
+                    <xs:element type="xs:string" name="content"/>
+                    <xs:element type="xs:string" name="remark"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,25 @@
+<params>
+	<refundtype>0-废票;1-退票</refundtype>
+	<voidorder>
+		<orderid>预定订单编号</orderid>
+		<poundagedealtype>手续费处理方式(1 以平台为准,0 双方必须一致)</poundagedealtype>
+		<passengers>
+			<passengertype>乘机人类型(0 全部,1 成人,2 儿童,3 婴儿)(说明:一次废票只能提交一种乘客类型)
+			</passengertype>
+			<passenger>
+				<name>姓名 1</name>
+				<ticketno>票号 1</ticketno>
+				<credentialid>证件号 1</credentialid>
+				<poundage>
+					单张机票手续费
+				</poundage>
+				<type>1 成人,2 儿童,3 婴儿</type>
+			</passenger>
+		</passengers>
+		<applyreason>
+			<reasonid>理由 id</reasonid>
+			<reasondetails>理由内容</reasondetails>
+			<reasonremark>理由备注(可以不传)</reasonremark>
+		</applyreason>
+	</voidorder>
+</params>

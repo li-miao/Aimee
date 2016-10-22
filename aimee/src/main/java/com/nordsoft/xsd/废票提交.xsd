@@ -1,0 +1,44 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="params">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="refundtype"/>
+        <xs:element name="voidorder">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="orderid"/>
+              <xs:element type="xs:string" name="poundagedealtype"/>
+              <xs:element name="passengers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="passengertype"/>
+                    <xs:element name="passenger">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="name"/>
+                          <xs:element type="xs:string" name="ticketno"/>
+                          <xs:element type="xs:string" name="credentialid"/>
+                          <xs:element type="xs:string" name="poundage"/>
+                          <xs:element type="xs:string" name="type"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="applyreason">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="reasonid"/>
+                    <xs:element type="xs:string" name="reasondetails"/>
+                    <xs:element type="xs:string" name="reasonremark"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
